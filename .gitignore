@@ -10,4 +10,7 @@ app/.vscode
 **/.dockerignore
 **/Dockerfile
 
+./docker-compose.yml
+
 .DS_Store
+docker-compose.yml
