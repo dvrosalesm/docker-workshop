@@ -1,0 +1,13 @@
+app/node_modules
+app/.DS_Store
+app/dist
+app/dist-ssr
+app/*.local
+app/.vscode
+
+**/node_modules
+**/.env
+**/.dockerignore
+**/Dockerfile
+
+.DS_Store
