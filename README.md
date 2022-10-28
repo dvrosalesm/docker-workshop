@@ -95,7 +95,7 @@ services:
         condition: service_healthy
 ```
 
-3. Run the up command `docker-compose up` inside the app folder. Use the `-d` flag if to run it as dettached from the terminal.
+3. Run the up command `docker-compose up` inside the root folder. Use the `-d` flag if to run it as dettached from the terminal.
 4. That's it!
 
 The applications will be available on:
