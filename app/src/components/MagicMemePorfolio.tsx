@@ -10,8 +10,9 @@ const MagicMemePorfolio = () => {
   const [portfolio, setPortfolio] = useState<PortfolioType[]>([]);
 
   const magicPaste = async (event: ClipboardEvent) => {
-    let items = (event.clipboardData || event.originalEvent.clipboardData)
-      .items;
+    let items = event.clipboardData?.items;
+
+    if (!items) return;
 
     // console.log(JSON.stringify(items));
     const blob =
@@ -35,6 +36,8 @@ const MagicMemePorfolio = () => {
         loadPortfolio();
       });
     };
+
+    if (!blob) return;
 
     reader.readAsDataURL(blob);
   };

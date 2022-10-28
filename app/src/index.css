@@ -65,7 +65,8 @@ code {
 
 .flying-meme-container {
   position: relative;
-  max-width: 500px;
+  width: 500px;
+  resize: both;
 }
 
 .flying-meme-container img {

@@ -8,10 +8,11 @@ export const setup = (app: Application) => {
   dotenv.config();
   app.use(express.json({ limit: "25mb" }));
   app.use(cors());
+  app.options("*", cors());
 
   const memeManager = new MemeManager();
   connect(
-    `mongodb://${process.env.mongo_username}:${process.env.password}@${process.env.mongo_ip}/`,
+    `mongodb://${process.env.mongo_username}:${process.env.mongo_password}@${process.env.mongo_ip}/`,
     {}
   );
 
